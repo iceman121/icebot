@@ -15,6 +15,16 @@ bot = commands.Bot(command_prefix='>')
 
 
 @bot.command()
+async def help(ctx):
+    help_text = """Icebot supports the following commands-\n
+    ping-\tpong!\n
+    ip-\tDisplays ip of the server\n
+    util-\tDisplays CPU and RAM utils % of the server
+    """
+    await ctx.send(help_text)
+
+
+@bot.command()
 async def ping(ctx):
     await ctx.send('pong')
 
@@ -26,7 +36,7 @@ async def ip(ctx):
 
 
 @bot.command()
-async def status(ctx):
+async def util(ctx):
     cpu = psutil.cpu_percent()
     ram = psutil.virtual_memory().percent
     await ctx.send(f'CPU util = {cpu:.2f}%, RAM util = {ram:.2f}%')
