@@ -3,3 +3,6 @@ img/
 
 # Pycharm utilities
 .idea
+
+# Config
+*.ini
