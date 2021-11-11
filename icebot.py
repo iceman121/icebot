@@ -20,8 +20,8 @@ async def ping(ctx):
 
 @bot.command()
 async def ip(ctx):
-    ip_query = requests.request('GET', 'https://icanhazip.com').replace('\\n', '')
-    await ctx.send(ip_query.text)
+    ip_query = requests.request('GET', 'https://icanhazip.com')
+    await ctx.send(ip_query.text.replace('\\n', ''))
 
 
 bot.run(parser['Discord']['token'])
