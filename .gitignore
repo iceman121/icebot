@@ -1,0 +1,5 @@
+# Image Directories
+img/
+
+# Pycharm utilities
+.idea
