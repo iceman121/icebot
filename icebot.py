@@ -15,7 +15,7 @@ bot = commands.Bot(command_prefix='>')
 
 
 @bot.command()
-async def help(ctx):
+async def commands(ctx):
     help_text = """Icebot supports the following commands-\n
     ping-\tpong!\n
     ip-\tDisplays ip of the server\n
